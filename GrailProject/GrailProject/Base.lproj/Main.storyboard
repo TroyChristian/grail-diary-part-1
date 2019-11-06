@@ -63,6 +63,9 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="Rjq-sO-Vli" secondAttribute="bottom" constant="-8.5" id="oV7-oT-QVK"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="VtO-Hl-kiD" kind="show" identifier="ShowPOIDetailSegue" id="Zd0-zt-ZWe"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -91,6 +94,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9wB-hF-JES" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="921.73913043478262" y="71.651785714285708"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aAc-ex-lZv">
+            <objects>
+                <viewController id="VtO-Hl-kiD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="azs-Fx-Gby">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Country" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEm-2I-8CC">
+                                <rect key="frame" x="337" y="108" width="62" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rc1-Y8-5Ct">
+                                <rect key="frame" x="31" y="351" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lithuania-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ywm-oQ-aMJ">
+                                <rect key="frame" x="20" y="169" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ywm-oQ-aMJ" secondAttribute="height" multiplier="1:1" id="Bn6-gE-Dgg"/>
+                                    <constraint firstAttribute="height" constant="150" id="D6o-C2-Wp5"/>
+                                    <constraint firstAttribute="width" constant="150" id="XUf-xD-NEG"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BoE-Ou-OfP">
+                                <rect key="frame" x="31" y="459" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nj5-nd-ND1">
+                                <rect key="frame" x="284" y="107" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ywm-oQ-aMJ" firstAttribute="leading" secondItem="qRc-zV-YW9" secondAttribute="leading" constant="20" id="6Gt-Ag-mPN"/>
+                            <constraint firstItem="rc1-Y8-5Ct" firstAttribute="top" secondItem="Ywm-oQ-aMJ" secondAttribute="bottom" constant="54" id="7fr-1G-kDt"/>
+                            <constraint firstItem="rc1-Y8-5Ct" firstAttribute="leading" secondItem="qRc-zV-YW9" secondAttribute="leading" constant="31" id="D3y-K3-Woa"/>
+                            <constraint firstItem="Ywm-oQ-aMJ" firstAttribute="top" secondItem="qRc-zV-YW9" secondAttribute="top" constant="81" id="O7z-7h-GK0"/>
+                            <constraint firstAttribute="trailing" secondItem="Nj5-nd-ND1" secondAttribute="trailing" constant="20" id="bat-M3-Xl5"/>
+                            <constraint firstItem="qRc-zV-YW9" firstAttribute="trailing" secondItem="Ywm-oQ-aMJ" secondAttribute="trailing" constant="154" id="cad-zy-u88"/>
+                            <constraint firstItem="Nj5-nd-ND1" firstAttribute="top" secondItem="qRc-zV-YW9" secondAttribute="top" constant="20" id="hEC-zq-K7J"/>
+                            <constraint firstItem="Ywm-oQ-aMJ" firstAttribute="leading" secondItem="qRc-zV-YW9" secondAttribute="leading" constant="20" id="zAO-8e-VZO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qRc-zV-YW9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IAc-gy-lpE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uGC-GF-dxI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1982.608695652174" y="73.660714285714278"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6Q1-4W-EDc">
@@ -189,4 +256,7 @@
             <point key="canvasLocation" x="11.594202898550726" y="71.651785714285708"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Lithuania-1" width="16" height="16"/>
+    </resources>
 </document>
